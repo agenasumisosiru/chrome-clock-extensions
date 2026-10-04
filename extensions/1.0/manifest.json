@@ -1,1 +1,12 @@
-
+{
+  "manifest_version": 3,
+  "name": "超軽量時計",
+  "version": "1.0",
+  "description": "クリックすると独立した時計タブを開きます",
+  "action": {
+    "default_title": "時計を開く"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
