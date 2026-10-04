@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>超軽量時計 - 配信スナイプ向けChrome拡張機能</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #58a6ff;
+            --card-bg: #161b22;
+            --border-color: #30363d;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(180deg, #1f242c 0%, var(--bg-color) 100%);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #f0f6fc;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: #8b949e;
+            margin-bottom: 2rem;
+        }
+
+        .btn-github {
+            display: inline-flex;
+            align-items: center;
+            background-color: #238636;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .btn-github:hover {
+            background-color: #2ea043;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 600px) {
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .installation {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .installation h2 {
+            margin-top: 0;
+            color: #f0f6fc;
+        }
+
+        ol {
+            padding-left: 1.2rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+        }
+
+        code {
+            background-color: rgba(110, 118, 129, 0.4);
+            padding: 0.2rem 0.4rem;
+            border-radius: 6px;
+            font-family: ui-monospace, SFMono-Regular, SF Pro Text, Menlo, Consolas, Liberation Mono, monospace;
+            font-size: 85%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>超軽量時計</h1>
+        <p class="tagline">配信スナイプに最適な、メモリを喰わない最速・最軽量のChrome拡張機能</p>
+        <a href="https://github.com/agenasumisosiru/chrome-clock-extensions" class="btn-github" target="_blank" rel="noopener noreferrer">
+            GitHubで見る・ダウンロード
+        </a>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>概要</h2>
+            <p>
+                本機能は、Google Chrome用の超軽量な時計拡張機能です。<code>time.is</code> などのWeb時計サイトを裏で開いて配信のスナイプ（同時マッチング）を狙うよりも、<strong>圧倒的にメモリ使用量が少なくPCへの負荷を最小限に抑えます。</strong> コンマ数秒を争うオンラインゲームの配信スナイプや、正確な時間を把握したいあらゆるシーンにご活用ください。
+            </p>
+        </section>
+
+        <section class="features">
+            <div class="card">
+                <h3>⚡ 超軽量・低負荷</h3>
+                <p>無駄なスクリプトや広告、重いUIを一切排除。バックグラウンドのメモリをほぼ消費しません。</p>
+            </div>
+            <div class="card">
+                <h3>🎯 配信スナイプに最適</h3>
+                <p>ゲームの動作を重くすることなく、画面の隅や別モニターで正確な時刻を確認できます。</p>
+            </div>
+        </section>
+
+        <section class="installation">
+            <h2>導入方法（手動インストール）</h2>
+            <p>現在GitHubにてソースコードを公開しています。以下の手順で簡単に導入できます。</p>
+            <ol>
+                <li>上のボタン、またはGitHubリポジトリからZIPファイルをダウンロードして解凍します。</li>
+                <li>Chromeブラウザを開き、アドレスバーに <code>chrome://extensions/</code> と入力して拡張機能管理画面を開きます。</li>
+                <li>画面右上にある<strong>「デベロッパー モード」</strong>のスイッチをオンにします。</li>
+                <li>画面左上に表示される<strong>「パッケージ化されていない拡張機能を読み込む」</strong>ボタンをクリックします。</li>
+                <li>解凍したフォルダ（<code>manifest.json</code> が含まれているフォルダ）を選択すると、インストールが完了します！</li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 agenasumisosiru. Released under the MIT License.</p>
+    </footer>
+
+</body>
+</html>
